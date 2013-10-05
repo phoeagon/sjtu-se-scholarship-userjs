@@ -66,7 +66,7 @@ function handleDialog(){
 	
 	$('#Notes').parent().append(
 		avgElement
-	).append(
+	).parent().append(
 			$('<div>').css('font-size','small').html('Enhancements by Zhe Qiu <br/>Institute of Parallel And Distributed Systems')
 		)
 	$('#avg')[0].setAttribute('type','range')
