@@ -1,3 +1,15 @@
+// ==UserScript==
+// @id            sjtu-se-scholarship-userjs@phoeagon
+// @name          SJTU SE scholarship system userscript 
+// @namespace     http://about.me/phoeagon
+// @description   Enhancements for the scholarship system of School of Software, Shanghai Jiao Tong University
+// @include      *://202.120.40.52:10080/Home/Scoring
+// @updateURL   https://raw.github.com/phoeagon/sjtu-se-scholarship-userjs/master/se.scholarship.user.js#bypass=true
+// @downloadURL   https://raw.github.com/phoeagon/sjtu-se-scholarship-userjs/master/se.scholarship.user.js#bypass=true
+// ==/UserScript==
+
+$(window).load( 
+function (){
 var distributeValueHandler = 0;
 function handleDialog(){
 	$('#A').attr('class','indslide')
@@ -64,3 +76,4 @@ function handler(){
 	setTimeout(  handleDialog , 100 );
 }
 $('[role=gridcell]').dblclick( handler );
+})
