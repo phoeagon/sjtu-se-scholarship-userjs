@@ -4,7 +4,7 @@
 // @namespace     http://about.me/phoeagon
 // @description   Enhancements for the scholarship system of School of Software, Shanghai Jiao Tong University
 // @include      *://202.120.40.52:10080/Home/Scoring
-// @updateURL   https://raw.github.com/phoeagon/sjtu-se-scholarship-userjs/master/se.scholarship.user.js#bypass=true
+// @updateURL   http://userscripts.org/scripts/source/179232.user.js
 // @downloadURL   https://raw.github.com/phoeagon/sjtu-se-scholarship-userjs/master/se.scholarship.user.js#bypass=true
 // ==/UserScript==
 
