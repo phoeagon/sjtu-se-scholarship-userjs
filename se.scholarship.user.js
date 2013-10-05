@@ -10,13 +10,7 @@
 // ==/UserScript==
 
 
-function checkjq( ){
-	console.log( typeof($) );
-	if ( typeof($)=='undefined' ){
-		setTimeout( checkjq , 100 );
-		return;
-	}
-	
+function run(){
 	$(window).load( 
 	function (){
 	console.log( " loading " );
@@ -90,4 +84,17 @@ function checkjq( ){
 	$('[role=gridcell]').dblclick( handler );
 	})
 }
-checkjq();
+
+function addJQuery(callback) {
+  var script = document.createElement("script");
+  script.setAttribute("src", "//code.jquery.com/jquery-2.0.3.min.js");
+  script.addEventListener('load', function() {
+    var script = document.createElement("script");
+    script.textContent = "window.jQ=jQuery.noConflict(true);(" + callback.toString() + ")();";
+    document.body.appendChild(script);
+  }, false);
+  document.body.appendChild(script);
+}
+if ( typeof($)=='undefined' )
+	addJQuery( run );
+else run();
