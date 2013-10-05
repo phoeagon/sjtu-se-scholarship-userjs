@@ -30,6 +30,8 @@ function handleDialog(){
 		$(ele).parent().contents()[4].nodeValue="";
 		$(ele).parent().append(
 			$('<span>').attr('id',$(ele).attr('id')+'_val').attr('class','indvalue')
+		).append(
+			$('<div>').css('font-size','small').html('Enhancements by Zhe Qiu <br/>Institute of Parallel And Distributed Systems')
 		)
 	})
 	$('.indvalue').css('font-size','large')
