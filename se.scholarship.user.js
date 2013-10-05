@@ -6,12 +6,18 @@
 // @include      *://202.120.40.52:10080/Home/Scoring
 // @updateURL   http://userscripts.org/scripts/source/179232.user.js
 // @downloadURL   https://raw.github.com/phoeagon/sjtu-se-scholarship-userjs/master/se.scholarship.user.js#bypass=true
+// @run-at document-end
 // ==/UserScript==
 
-function run( ){
+function checkjq( ){
+	console.log( typeof($) );
+	if ( typeof($)=='undefined' ){
+		setTimeout( checkjq , 100 );
+		return;
+	}
 	
-
-
+	$(window).load( 
+	function (){
 	console.log( " loading " );
 	var distributeValueHandler = 0;
 	function handleDialog(){
@@ -81,6 +87,6 @@ function run( ){
 		setTimeout(  handleDialog , 100 );
 	}
 	$('[role=gridcell]').dblclick( handler );
-	
+	})
 }
 checkjq();
