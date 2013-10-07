@@ -49,7 +49,7 @@ function run(){
 			})
 			//console.log( sum );
 			$('#avg').val(  sum  );
-			$('#Notes').val(  Math.round(sum*1000)/1000  )
+			$('#tscore').text(  Math.round(sum*1000)/1000  )
 		}
 		function distributeValue(){
 			var sum = parseFloat( $('#avg').val() );
@@ -70,8 +70,12 @@ function run(){
 		var avgElement =  $('<input>').attr('id','avg').attr('max','30')
 					.attr('min','15');
 		
-		$('#Notes').parent().append(
+		$('#Notes').parent().prepend(
 			avgElement
+        ).prepend(
+            $('<b>').text("Total: ").append(
+                $('<span id="tscore">')
+            )
 		).parent().append(
 				$('<div>').css('font-size','small').html('Enhancements by Zhe Qiu <br/>Institute of Parallel And Distributed Systems')
 			)
